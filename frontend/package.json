@@ -1,0 +1,34 @@
+{
+  "name": "digiaccel-todo-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mobile-first To-Do List UI built with React, Vite and Tailwind CSS",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.107.1",
+    "axios": "^1.21.1",
+    "date-fns": "^4.4.0",
+    "framer-motion": "^14.14.0",
+    "lucide-react": "^1.73.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-hot-toast": "^2.6.1",
+    "react-router-dom": "^7.18.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "autoprefixer": "^10.6.2",
+    "oxlint": "^1.93.0",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.3.8"
+  }
+}
