@@ -104,7 +104,7 @@ VITE_API_URL=https://your-api.vercel.app/api
 | `NODE_ENV` | No | `development`, `test`, or `production` |
 | `PORT` | No | Local server port, defaults to `5001` |
 | `MONGODB_URI` | Yes | MongoDB connection string, including the database name |
-| `CLIENT_ORIGINS` | No | Comma-separated allowed frontend origins |
+| `CLIENT_ORIGINS` | No | Comma-separated allowed frontend origins; supports `*` wildcard patterns |
 | `RATE_LIMIT_MAX` | No | Maximum requests per 15-minute window, defaults to `500` |
 
 Never commit `.env`. Use `.env.example` as the template.
@@ -209,7 +209,7 @@ Add these environment variables:
 ```text
 MONGODB_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/digiaccel_todo?retryWrites=true&w=majority
 NODE_ENV=production
-CLIENT_ORIGINS=https://your-frontend.vercel.app
+CLIENT_ORIGINS=https://digiaccel-todo-*.vercel.app,http://localhost:5173,http://127.0.0.1:5173
 RATE_LIMIT_MAX=500
 ```
 
@@ -235,7 +235,7 @@ Add:
 VITE_API_URL=https://your-api.vercel.app/api
 ```
 
-Deploy. After the frontend URL is available, update the backend's `CLIENT_ORIGINS` value to the exact frontend origin and redeploy the backend. Environment variable changes require a new deployment.
+Deploy. The backend's `CLIENT_ORIGINS` value accepts exact origins and `*` wildcard patterns, so the Vercel deployment and preview URLs can all be allowed. Redeploy the backend after changing environment variables because changes require a new deployment.
 
 ### 4. Seed Production Data
 

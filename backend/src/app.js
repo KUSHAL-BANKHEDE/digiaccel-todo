@@ -9,6 +9,7 @@ import ensureDb from './middleware/ensureDb.js';
 import notFound from './middleware/notFound.js';
 import errorHandler from './middleware/errorHandler.js';
 import ApiError from './utils/ApiError.js';
+import isAllowedOrigin from './utils/origin.js';
 
 const app = express();
 
@@ -22,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || env.clientOrigins.includes('*') || env.clientOrigins.includes(origin)) {
+      if (isAllowedOrigin(origin, env.clientOrigins)) {
         return callback(null, true);
       }
 
