@@ -4,11 +4,11 @@ A mobile-first MERN to-do application built for the Digiaccel SDE-1 assessment. 
 
 ## Live Application
 
-- Frontend: `https://your-frontend.vercel.app`
-- API: `https://your-api.vercel.app`
+- Frontend: https://digiaccel-todo-web.vercel.app
+- API: https://digiaccel-todo-api.vercel.app
 - Database: MongoDB Atlas
 
-Replace the placeholder URLs above after deploying.
+The application is deployed as two Vercel projects from this repository.
 
 ## Features
 
